@@ -22,96 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:wght@400;500&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"404 — Page Not Found","description":"This page could not be found on Impact Wealth Partners website.","url":"https://www.letsimpactwealth.com/404.html","isPartOf":{"@id":"https://www.letsimpactwealth.com/#website"}}
-</script>
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Nunito', sans-serif;
-  background: #f0ece3;
-  color: #3a4558;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
-.logo-wrap { margin-bottom: 2.5rem; }
-.logo-wrap img { height: 60px; width: auto; }
-.code {
-  font-family: 'Lora', serif;
-  font-size: clamp(5rem, 18vw, 10rem);
-  font-weight: 500;
-  color: #e8693d;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-  opacity: 0.18;
-  user-select: none;
-}
-h1 {
-  font-family: 'Lora', serif;
-  font-size: clamp(1.4rem, 4vw, 2.2rem);
-  font-weight: 500;
-  color: #3a4558;
-  margin-bottom: 1rem;
-}
-p {
-  font-size: 1rem;
-  color: #5a6472;
-  max-width: 460px;
-  line-height: 1.75;
-  margin-bottom: 2rem;
-}
-.actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.btn-primary {
-  display: inline-block;
-  background: #e8693d;
-  color: #fff;
-  padding: 0.8rem 2rem;
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.btn-primary:hover { opacity: 0.88; }
-.btn-outline {
-  display: inline-block;
-  background: transparent;
-  color: #3a4558;
-  border: 1.5px solid #3a4558;
-  padding: 0.8rem 2rem;
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-.btn-outline:hover { background: #3a4558; color: #fff; }
-.contact-strip {
-  margin-top: 3rem;
-  font-size: 0.82rem;
-  color: #8a9098;
-}
-.contact-strip a {
-  color: #e8693d;
-  text-decoration: none;
-  font-weight: 700;
-}
-.contact-strip a:hover { text-decoration: underline; }
-</style>
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
+</script><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
 <link rel="apple-touch-icon" href="/logo.png"/>
 <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -125,6 +36,31 @@ p {
 </script>
 <link rel="preload" as="image" href="/logo.png" fetchpriority="high"/>
 <!-- security: rel=noopener noreferrer applied to all external links -->
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg, #f0ece3); color: #3a4558; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; }
+.logo-wrap { margin-bottom: 2rem; }
+.logo-wrap img { height: 50px; width: auto; max-width: 200px; }
+.code { font-family: 'Lora', Georgia, serif; font-size: clamp(4rem, 20vw, 9rem); font-weight: 500; color: #e8693d; line-height: 1; margin-bottom: 0.5rem; opacity: 0.16; user-select: none; }
+h1 { font-family: 'Lora', Georgia, serif; font-size: clamp(1.3rem, 5vw, 2rem); font-weight: 500; color: #3a4558; margin-bottom: 0.9rem; }
+p { font-size: 0.9rem; color: #5a6472; max-width: 400px; line-height: 1.75; margin-bottom: 1.8rem; }
+.actions { display: flex; flex-direction: column; gap: 0.8rem; align-items: center; width: 100%; max-width: 300px; }
+.btn-primary, .btn-outline { display: block; width: 100%; border: none; padding: 0.78rem 2rem; font-family: 'Nunito', sans-serif; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+.btn-primary { background: #e8693d; color: #fff; border: 1.5px solid #e8693d; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-outline { background: transparent; color: #3a4558; border: 1.5px solid #3a4558; }
+.btn-outline:hover { background: #3a4558; color: #fff; }
+.contact-strip { margin-top: 2.5rem; font-size: 0.78rem; color: #8a9098; }
+.contact-strip a { color: #e8693d; text-decoration: none; font-weight: 700; }
+.contact-strip a:hover { text-decoration: underline; }
+@media (min-width: 500px) {
+  .actions { flex-direction: row; max-width: unset; }
+  .btn-primary, .btn-outline { width: auto; }
+  body { padding: 2rem; }
+}
+</style>
 </head>
 <body id="main-404" role="main" aria-label="Page not found" itemscope itemtype="https://schema.org/WebPage">
 <a href="#main-404" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:9999;background:#e8693d;color:#fff;padding:8px 16px;font-family:sans-serif;font-size:14px;text-decoration:none;" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
