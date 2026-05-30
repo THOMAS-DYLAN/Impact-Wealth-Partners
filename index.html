@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <!-- ═══ PRIMARY SEO META ═══ -->
-  <title>Flat Fee Financial Planner Sioux Falls & Phoenix | Impact Wealth Partners</title>
+  <title>Impact Wealth Partners | Light Edition</title>
   <meta name="description" content="Impact Wealth Partners — your flat fee, fee-only, fiduciary financial planner in Sioux Falls SD and Phoenix AZ. Personalized investment, retirement, estate & tax planning with no hidden commissions. Call (605) 333-9886."/>
   <meta name="keywords" content="flat fee financial planner Sioux Falls, fee-only financial advisor Sioux Falls SD, fiduciary financial planner South Dakota, flat fee financial planner Phoenix Arizona, fee-only financial advisor Phoenix AZ, financial planning Sioux Falls, retirement planning Sioux Falls, investment planning Phoenix, estate planning South Dakota, wealth management Phoenix AZ, Impact Wealth Partners, Michael Peterson wealth advisor, flat fee advisor SD AZ"/>
   <meta name="author" content="Michael J. Peterson, Impact Wealth Partners"/>
@@ -187,6 +187,7 @@
 <!-- Favicon -->
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>  <!-- ═══ RESOURCE HINTS ═══ -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="dns-prefetch" href="https://images.unsplash.com"/>
@@ -210,314 +211,706 @@
   </script>
 <style>
 :root {
-  --bg:                  #f0ece3;
-  --bg-alt:              #e8e3da;
-  --heading:             #3a4558;
-  --body:                #5a6472;
-  --accent:              #e8693d;
-  --border:              rgba(58,69,88,0.12);
-  --nav-bg:              #ffffff;
-  --nav-text:            #3a4558;
-  --nav-shadow:          rgba(58,69,88,0.1);
-  --nav-btn-border:      #3a4558;
-  --nav-btn-hover-bg:    #3a4558;
-  --nav-btn-hover-text:  #ffffff;
-  --btn-border:          #3a4558;
-  --btn-text:            #3a4558;
-  --btn-hover-bg:        #3a4558;
-  --btn-hover-text:      #ffffff;
-  --icon-border:         rgba(58,69,88,0.22);
-  --icon-bg:             #f0ece3;
-  --img-fallback:        #c8bfb0;
-  --input-bg:            #ffffff;
-  --input-text:          #3a4558;
-  --input-placeholder:   #8a9098;
-  --submit-bg:           #2c2f37;
-  --submit-text:         #ffffff;
-  --footer-bg:           #e8e3da;
-  --footer-disc:         #7a6856;
-  --switcher-label-bg:   #3a4558;
-  --switcher-label-text: #ffffff;
-  --switcher-btn-bg:     #e8693d;
-  --switcher-btn-text:   #ffffff;
-}
-body { background: var(--bg); color: var(--heading); }
-
-
-/* ─ RESET & BASE ─ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Nunito', sans-serif; font-weight: 400; line-height: 1.7; -webkit-font-smoothing: antialiased; background: var(--bg); color: var(--text); }
-
-/* ─ SKIP LINK ─ */
-.skip-link { position: absolute; left: -9999px; top: 0; z-index: 9999; background: var(--accent); color: #fff; padding: 8px 16px; font-size: 0.85rem; text-decoration: none; }
-.skip-link:focus { left: 0; }
-
-/* ─ VERSION SWITCHER ─ */
-.version-switcher { position: fixed; bottom: 1rem; right: 1rem; z-index: 999; display: flex; align-items: center; box-shadow: 0 4px 24px rgba(0,0,0,0.18); border-radius: 50px; overflow: hidden; font-family: 'Nunito', sans-serif; }
-.version-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.55rem 0.75rem; background: var(--switcher-label-bg); color: var(--switcher-label-text); white-space: nowrap; }
-.version-btn { display: flex; align-items: center; gap: 5px; padding: 0.55rem 0.85rem; background: var(--switcher-btn-bg); color: var(--switcher-btn-text); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: opacity 0.2s; }
-.version-btn:hover { opacity: 0.85; }
-.version-btn svg { width: 12px; height: 12px; }
-
-/* ─ NAV ─ */
-#nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 64px; background: var(--nav-bg); border-bottom: 1px solid var(--border); transition: box-shadow 0.3s; }
-#nav.scrolled { box-shadow: 0 2px 28px var(--nav-shadow); }
-.nav-brand img { height: 42px; width: auto; display: block; }
-.nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: var(--nav-bg); padding: 1rem 4%; gap: 0; border-bottom: 1px solid var(--border); z-index: 199; list-style: none; }
-.nav-links.open { display: flex; }
-.nav-links li a { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; padding: 0.75rem 0; display: block; color: var(--nav-text); transition: color 0.2s; border-bottom: 1px solid var(--border); }
-.nav-links li:last-child a { border-bottom: none; padding-bottom: 0; }
-.nav-links li a:hover { color: var(--accent); }
-.nav-contact-btn { margin-top: 0.6rem; text-align: center; border: 1.5px solid var(--accent) !important; color: var(--accent) !important; padding: 0.6rem 1rem !important; display: block !important; border-bottom: none !important; }
-.hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
-.hamburger span { width: 22px; height: 2px; background: var(--nav-text); display: block; transition: all 0.3s; }
-
-/* ─ HERO (mobile: stacked column) ─ */
-#hero { display: flex; flex-direction: column; padding-top: 64px; background: var(--bg); position: relative; overflow: hidden; }
-.hero-text { padding: 2.5rem 4% 2rem; display: flex; flex-direction: column; order: 1; }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.63rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.9rem; animation: fadeUp 0.7s 0.1s both; }
-.hero-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--accent); flex-shrink: 0; }
-.hero-text h1 { font-family: 'Lora', serif; font-size: clamp(1.7rem, 6vw, 3.1rem); font-weight: 500; color: var(--heading); line-height: 1.16; margin-bottom: 0.9rem; animation: fadeUp 0.8s 0.25s both; }
-.hero-text p { font-size: 0.88rem; color: var(--body); line-height: 1.8; margin-bottom: 1.5rem; animation: fadeUp 0.8s 0.4s both; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; animation: fadeUp 0.8s 0.55s both; }
-.hero-photo { order: 2; width: 100%; height: 52vw; min-height: 200px; max-height: 280px; overflow: hidden; background: var(--img-fallback); position: relative; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; filter: brightness(0.96) saturate(0.88); animation: fadeIn 1s 0.1s both; }
-.hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--hero-overlay) 0%, transparent 40%); pointer-events: none; }
-.hero-stats { order: 3; display: flex; flex-direction: row; position: static; animation: none; }
-.stat-card { flex: 1; background: var(--surface); border-top: 3px solid var(--accent); border-right: 1px solid var(--border); padding: 0.75rem 0.6rem; box-shadow: none; }
-.stat-card:last-child { border-right: none; }
-.stat-num { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 500; color: var(--accent); line-height: 1; }
-.stat-label { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--body); margin-top: 2px; }
-
-/* ─ BUTTONS ─ */
-.btn-outline-dark, .btn-primary-accent { display: inline-block; font-family: 'Nunito', sans-serif; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 0.72rem 1.5rem; cursor: pointer; transition: all 0.22s; }
-.btn-outline-dark { background: transparent; color: var(--btn-text); border: 1.5px solid var(--btn-border); }
-.btn-outline-dark:hover { background: var(--btn-hover-bg); color: var(--btn-hover-text); transform: translateY(-1px); }
-.btn-primary-accent { background: var(--accent); color: #fff; border: 1.5px solid var(--accent); }
-.btn-primary-accent:hover { opacity: 0.88; transform: translateY(-1px); }
-.btn-outline-footer { display: inline-block; border: 1.5px solid var(--accent); color: var(--accent); background: transparent; padding: 0.5rem 1.4rem; font-family: 'Nunito', sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.22s; margin-top: 1rem; }
-.btn-outline-footer:hover { background: var(--accent); color: #fff; }
-
-/* ─ SECTION CHROME ─ */
-.section-label { display: inline-flex; align-items: center; gap: 7px; font-size: 0.63rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.55rem; }
-.section-label::before { content: ''; width: 18px; height: 2px; background: var(--accent); }
-.section-heading { font-family: 'Lora', serif; font-size: clamp(1.45rem, 5vw, 2.7rem); font-weight: 500; color: var(--heading); margin-bottom: 0.7rem; line-height: 1.2; }
-.section-sub { font-size: 0.88rem; color: var(--body); line-height: 1.8; }
-.section-underline { width: 26px; height: 3px; background: var(--accent); margin-bottom: 0.9rem; border-radius: 2px; }
-
-/* ─ ABOUT / ALTERNATING (mobile: photo on top, text below) ─ */
-#about .alt-section, #about .alt-section.alt-reverse { display: flex; flex-direction: column; opacity: 0; transform: translateY(22px); transition: opacity 0.6s, transform 0.6s; }
-#about .alt-section.revealed, #about .alt-section.alt-reverse.revealed { opacity: 1; transform: none; }
-.alt-photo { order: -1 !important; height: 50vw; min-height: 190px; max-height: 280px; overflow: hidden; background: var(--img-fallback); position: relative; }
-.alt-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; filter: brightness(0.94) saturate(0.85); transition: filter 0.5s; }
-.alt-photo::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.04); pointer-events: none; }
-.alt-text { padding: 2rem 4% 2.5rem; display: flex; flex-direction: column; background: var(--bg); position: relative; order: 0; }
-.alt-text .bg-num { display: none; }
-.alt-text h3 { font-family: 'Lora', serif; font-size: clamp(1.25rem, 4.5vw, 2.1rem); font-weight: 500; color: var(--heading); margin-bottom: 0.45rem; }
-.alt-text p { font-size: 0.88rem; color: var(--body); line-height: 1.82; }
-
-/* ─ SERVICES (mobile: 1 col) ─ */
-.services-section { padding: 3rem 4%; text-align: center; background: var(--bg-alt); position: relative; overflow: hidden; }
-.services-section::before { content: 'SERVICES'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'Lora', serif; font-size: 5rem; font-weight: 700; color: var(--accent); opacity: 0.025; white-space: nowrap; pointer-events: none; user-select: none; }
-.services-section::after { content: ''; display: block; width: 36px; height: 3px; background: var(--accent); margin: 2.5rem auto 0; }
-.services-section .section-heading { margin-bottom: 0.5rem; }
-.services-section .section-sub { margin-bottom: 0; }
-.services-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border); margin-top: 2rem; }
-.service-item { background: var(--surface); padding: 1.6rem 1.4rem; text-align: left; opacity: 0; transform: translateY(14px); transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s, background 0.3s; position: relative; overflow: hidden; }
-.service-item::before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-.service-item.revealed { opacity: 1; transform: none; }
-.service-item:hover { background: var(--bg); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(0,0,0,0.08); }
-.service-item:hover::before { transform: scaleX(1); }
-.service-icon { width: 50px; height: 50px; border-radius: 12px; border: 1.5px solid var(--icon-border); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; background: var(--icon-bg); transition: background 0.3s, border-color 0.3s; }
-.service-item:hover .service-icon { background: var(--accent); border-color: var(--accent); }
-.service-icon svg { width: 24px; height: 24px; stroke: var(--accent); transition: stroke 0.3s; }
-.service-item:hover .service-icon svg { stroke: #fff; }
-.service-item h4 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 500; color: var(--heading); margin-bottom: 0.45rem; }
-.service-item p { font-size: 0.82rem; color: var(--body); line-height: 1.8; }
-
-/* ─ PROCESS (mobile: 1 col stacked) ─ */
-.process-section { padding: 3rem 4%; background: var(--bg); }
-.process-section .section-sub { margin-left: 0; }
-.process-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border); margin-top: 2rem; position: relative; }
-.process-grid::before { display: none; }
-.process-step { background: var(--surface); padding: 2rem 1.6rem; text-align: center; position: relative; z-index: 1; transition: background 0.3s; }
-.process-step:hover { background: var(--bg-alt); }
-.process-num { font-family: 'Lora', serif; font-size: 2.8rem; font-weight: 500; color: var(--accent); opacity: 0.2; line-height: 1; margin-bottom: 0.8rem; }
-.process-icon { width: 54px; height: 54px; border-radius: 50%; border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.9rem; transition: background 0.3s, border-color 0.3s; }
-.process-icon svg { width: 22px; height: 22px; stroke: var(--accent); transition: stroke 0.3s; }
-.process-step:hover .process-icon { background: var(--accent); border-color: var(--accent); }
-.process-step:hover .process-icon svg { stroke: #fff; }
-.process-step h4 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 500; color: var(--heading); margin-bottom: 0.45rem; }
-.process-step p { font-size: 0.83rem; color: var(--body); line-height: 1.8; }
-.process-connector { display: none; }
-
-/* ─ COMPARISON (mobile: stacked, no VS) ─ */
-.comparison-section { padding: 3rem 4%; text-align: center; background: var(--bg-alt); }
-.comparison-grid { display: flex; flex-direction: column; gap: 2rem; margin: 2rem auto 0; }
-.comparison-vs { display: none; }
-.comparison-col-header { font-family: 'Lora', serif; font-size: 0.98rem; font-weight: 500; color: var(--heading); margin-bottom: 0.9rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--border); }
-.comparison-col.good .comparison-col-header { color: var(--accent); border-bottom-color: var(--accent); }
-.comparison-item { display: flex; align-items: flex-start; gap: 0.55rem; margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--body); line-height: 1.55; text-align: left; }
-.comparison-item svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; }
-.check { stroke: var(--accent); }
-.cross { stroke: #c0392b; }
-.comparison-col.bad { opacity: 0.6; }
-
-/* ─ CONTACT (mobile: stacked) ─ */
-#contact { background: var(--accent); padding: 3rem 4%; }
-.contact-inner { display: flex; flex-direction: column; gap: 2rem; }
-.contact-left h2 { font-family: 'Lora', serif; font-size: clamp(1.35rem, 5vw, 2.4rem); font-weight: 500; color: #fff; line-height: 1.2; margin-bottom: 0.7rem; }
-.contact-left p { font-size: 0.88rem; color: rgba(255,255,255,0.88); line-height: 1.8; }
-.contact-right { display: flex; flex-direction: column; gap: 0.8rem; }
-.contact-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); padding: 0.9rem 1.1rem; }
-.contact-card-label { font-size: 0.6rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem; }
-.contact-card a { font-size: 0.92rem; font-weight: 700; color: #fff; text-decoration: none; display: block; transition: opacity 0.2s; }
-.contact-card a:hover { opacity: 0.8; }
-.contact-card-sub { font-size: 0.7rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
-
-/* ─ FOOTER (mobile: stacked) ─ */
-footer { background: var(--footer-bg); padding: 2.5rem 4% 1.5rem; }
-.footer-inner { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2rem; }
-.footer-brand img { height: 44px; width: auto; margin-bottom: 0.8rem; display: block; }
-.footer-brand p { font-size: 0.8rem; color: var(--footer-disc); line-height: 1.7; }
-.footer-col h5 { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; margin-top: 0.2rem; }
-.footer-col a { display: block; font-size: 0.82rem; color: var(--footer-disc); text-decoration: none; margin-bottom: 0.4rem; transition: color 0.2s; }
-.footer-col a:hover { color: var(--accent); }
-.footer-col .footer-phone { font-size: 0.88rem; font-weight: 700; color: var(--footer-text); }
-.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.2rem; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-align: center; }
-.footer-bottom p { font-size: 0.66rem; color: var(--footer-disc); }
-.footer-socials { display: flex; gap: 0.6rem; }
-.social-icon { width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: opacity 0.2s; }
-.social-icon:hover { opacity: 0.8; }
-.social-icon svg { width: 15px; height: 15px; }
-
-/* ─ ANIMATIONS ─ */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.service-item { opacity: 0; transform: translateY(14px); }
-.service-item.revealed { opacity: 1; transform: none; }
-.alt-section, .alt-section.alt-reverse { opacity: 0; transform: translateY(22px); }
-.alt-section.revealed, .alt-section.alt-reverse.revealed { opacity: 1; transform: none; }
-
-/* ═══════════════════════════════════════════
-   TABLET  ≥ 600px
-═══════════════════════════════════════════ */
-@media (min-width: 600px) {
-  .hero-text { padding: 3rem 5% 2.5rem; }
-  .hero-photo { height: 46vw; max-height: 340px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .alt-photo { height: 46vw; max-height: 340px; }
-  .comparison-grid { grid-template-columns: 1fr 50px 1fr; flex-direction: unset; gap: 0; }
-  .comparison-vs { display: flex; align-items: center; justify-content: center; padding-top: 2.8rem; }
-  .comparison-vs span { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.04em; }
-  .footer-inner { display: grid; grid-template-columns: 1fr 1fr; }
-  .version-label { font-size: 0.68rem; padding: 0.6rem 0.9rem; }
-  .version-btn { font-size: 0.7rem; padding: 0.6rem 1rem; }
+  --bg:          #faf8f4;
+  --bg-alt:      #f2ede5;
+  --surface:     #ffffff;
+  --dark:        #1c2432;
+  --dark-mid:    #242d3e;
+  --heading:     #1c2432;
+  --body:        #5a6070;
+  --muted:       #9aa0aa;
+  --accent:      #e8693d;
+  --accent-dk:   #c9522a;
+  --accent-lt:   rgba(232,105,61,0.09);
+  --gold:        #c8963a;
+  --border:      rgba(28,36,50,0.1);
+  --border-lt:   rgba(28,36,50,0.06);
+  --nav-bg:      #ffffff;
+  --nav-text:    #1c2432;
+  --img-fall:    #cdc8c0;
+  --serif:       'Playfair Display', Georgia, serif;
+  --sans:        'DM Sans', sans-serif;
+  --sw-a:#1c2432; --sw-b:#ffffff; --sw-c:#e8693d; --sw-d:#ffffff;
 }
 
-/* ═══════════════════════════════════════════
-   DESKTOP  ≥ 900px
-═══════════════════════════════════════════ */
-@media (min-width: 900px) {
-  #nav { height: 78px; padding: 0 5%; }
-  .nav-brand img { height: 50px; }
-  .nav-links {
-    display: flex !important; flex-direction: row; position: static;
-    background: transparent; padding: 0; gap: 0;
-    border-bottom: none; top: auto; left: auto; right: auto;
-    align-items: center; list-style: none;
-  }
-  .nav-links li a {
-    padding: 0.5rem 0.7rem; font-size: 0.78rem; display: inline;
-    border-bottom: none; position: relative;
-  }
-  .nav-links li a::after {
-    content: ''; position: absolute; bottom: 2px;
-    left: 0.7rem; right: 0.7rem; height: 2px; background: var(--accent);
-    transform: scaleX(0); transform-origin: left; transition: transform 0.25s;
-  }
-  .nav-links li a:hover::after { transform: scaleX(1); }
-  .nav-contact-btn { display: inline-block !important; text-align: left; border: 1.5px solid var(--nav-btn-border) !important; color: var(--nav-text) !important; padding: 0.42rem 1.1rem !important; margin-left: 0.8rem; margin-top: 0; border-bottom: none !important; }
-  .nav-contact-btn::after { display: none !important; }
-  .nav-contact-btn:hover { background: var(--nav-btn-hover-bg) !important; color: var(--nav-btn-hover-text) !important; border-color: var(--nav-btn-hover-bg) !important; }
-  .hamburger { display: none; }
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;line-height:1.7;background:var(--bg);color:var(--heading);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
 
-  #hero {
-    display: grid; flex-direction: unset;
-    grid-template-columns: 1fr 1fr; align-items: stretch;
-    padding-top: 0;
-    height: 60vh; max-height: 490px; min-height: 300px;
-  }
-  .hero-text { padding: calc(78px + 3rem) 4% 3rem 6%; order: 0; }
-  .hero-text p { font-size: 0.95rem; }
-  .hero-photo { order: 0; height: 100%; min-height: unset; max-height: unset; width: auto; }
-  .hero-stats {
-    position: absolute; bottom: 0; left: calc(50% - 60px);
-    order: 0; animation: fadeUp 0.9s 0.7s both; background: transparent;
-  }
-  .stat-card { flex: unset; min-width: 130px; border-right: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 0.9rem 1.4rem; box-shadow: 0 -4px 24px rgba(0,0,0,0.1); }
-  .stat-num { font-size: 1.5rem; }
-  .stat-label { font-size: 0.64rem; letter-spacing: 0.11em; }
+/* ── SWITCHER ── */
+.version-switcher{position:fixed;bottom:1.4rem;right:1.4rem;z-index:900;display:flex;border-radius:100px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.22)}
+.version-label{padding:.55rem .9rem;background:var(--sw-a);color:var(--sw-b);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.version-btn{display:flex;align-items:center;gap:5px;padding:.55rem .9rem;background:var(--sw-c);color:var(--sw-d);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:opacity .2s}
+.version-btn:hover{opacity:.8}
+.version-btn svg{width:10px;height:10px}
 
-  #about .alt-section,
-  #about .alt-section.alt-reverse {
-    display: grid; flex-direction: unset;
-    grid-template-columns: 1fr 1fr; align-items: stretch;
-  }
-  .alt-photo { order: 0 !important; height: 100%; min-height: 340px; max-height: 500px; }
-  #about .alt-section.alt-reverse .alt-photo { order: -1 !important; }
-  .alt-text { padding: 4.5rem 6%; order: 0; }
-  .alt-text .bg-num { display: block; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-family: 'Lora', serif; font-size: 8rem; font-weight: 600; color: var(--accent); opacity: 0.06; line-height: 1; user-select: none; pointer-events: none; }
-  .alt-section:hover .alt-photo img { filter: brightness(0.97) saturate(0.9); }
+/* ── NAV ── */
+#nav{position:sticky;top:0;z-index:800;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:var(--nav-bg);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.1)}
+.nav-logo img{height:46px;width:auto}
+.nav-links{display:none}
+.nav-pill{display:none}
+.hamburger{background:none;border:1px solid var(--border);padding:7px 9px;cursor:pointer;display:flex;flex-direction:column;gap:4px;border-radius:4px}
+.hamburger span{width:20px;height:1.5px;background:var(--nav-text);display:block;transition:.25s}
+.hamburger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+.nav-panel{position:fixed;inset:74px 0 0;background:var(--nav-bg);z-index:799;padding:2rem 5%;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.nav-panel.open{transform:none;pointer-events:all}
+.nav-panel a{font-size:.88rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--nav-text);padding:.9rem 0;border-bottom:1px solid var(--border);display:block;transition:color .2s}
+.nav-panel a:last-child{border-bottom:none;color:var(--accent);padding-top:1.2rem}
+.nav-panel a:hover{color:var(--accent)}
 
-  .services-section, .process-section { padding: 6rem 5%; }
-  .services-section::before { font-size: 14rem; }
-  .services-grid { grid-template-columns: repeat(3, 1fr); box-shadow: 0 2px 40px rgba(0,0,0,0.07); max-width: 960px; margin-left: auto; margin-right: auto; margin-top: 3rem; }
-  .service-item { padding: 2.4rem 2rem 2rem; }
-  .service-icon { width: 56px; height: 56px; }
-  .service-item h4 { font-size: 1.1rem; }
-  .services-section::after { margin-top: 3.5rem; width: 56px; }
+/* ── HERO ── */
+#hero{display:flex;flex-direction:column;min-height:calc(100svh - 74px)}
+.hero-dark{background:var(--dark);padding:3.5rem 5% 3rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-dark::before{content:'IWP';position:absolute;right:-2%;bottom:-10%;font-family:var(--serif);font-size:18rem;font-weight:700;color:rgba(255,255,255,.025);line-height:1;pointer-events:none;user-select:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.65rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;animation:fadeUp .7s .1s both}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);flex-shrink:0}
+.hero-dark h1{font-family:var(--serif);font-size:clamp(2rem,7vw,3.5rem);font-weight:500;color:#fff;line-height:1.1;margin-bottom:1.2rem;animation:fadeUp .8s .25s both}
+.hero-dark h1 em{font-style:italic;color:var(--accent)}
+.hero-dark p{font-size:clamp(.88rem,1.6vw,.98rem);color:rgba(255,255,255,.65);line-height:1.82;max-width:500px;margin-bottom:2.2rem;animation:fadeUp .8s .4s both;font-weight:300}
+.hero-photo{width:100%;height:52vw;min-height:220px;max-height:380px;overflow:hidden;background:var(--img-fall);position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;filter:brightness(.92) saturate(.88)}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,var(--dark) 0%,transparent 20%)}
 
-  .process-section { background: var(--bg); }
-  .process-grid { grid-template-columns: repeat(3, 1fr); margin-top: 3rem; }
-  .process-grid::before { display: block; content: ''; position: absolute; top: 3rem; left: calc(33.33% + 31px); right: calc(33.33% + 31px); height: 2px; background: var(--border); z-index: 0; }
-  .process-step { padding: 2.5rem 2rem; }
-  .process-num { font-size: 3.5rem; }
-  .process-icon { width: 62px; height: 62px; }
 
-  .comparison-section { padding: 6rem 5%; }
-  .comparison-grid { max-width: 760px; margin-left: auto; margin-right: auto; margin-top: 3rem; }
 
-  #contact { padding: 5rem 5%; }
-  .contact-inner { flex-direction: row; gap: 4rem; align-items: center; max-width: 900px; margin: 0 auto; }
 
-  footer { padding: 4rem 5% 2rem; }
-  .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-  .footer-brand img { height: 52px; }
-  .footer-brand p { max-width: 280px; }
-  .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
 
-  .version-switcher { bottom: 2rem; right: 2rem; }
-  .version-label { font-size: 0.7rem; padding: 0.65rem 1rem; }
-  .version-btn { font-size: 0.73rem; padding: 0.65rem 1.1rem; }
-  .version-btn svg { width: 13px; height: 13px; }
+
+/* ── BUTTONS ── */
+.btn-line{display:inline-flex;align-items:center;gap:10px;border:none;border-bottom:1.5px solid rgba(255,255,255,.4);color:rgba(255,255,255,.85);background:transparent;padding:.5rem 0;font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .22s;animation:fadeUp .8s .55s both}
+.btn-line::after{content:'→';font-size:.9rem;transition:transform .22s}
+.btn-line:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.btn-line:hover::after{transform:translateX(4px)}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:#fff;border:none;padding:.78rem 2rem;font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s}
+.btn-dark::after{content:'→';transition:transform .22s}
+.btn-dark:hover{background:var(--accent)}
+.btn-dark:hover::after{transform:translateX(3px)}
+.btn-accent-line{display:inline-flex;align-items:center;gap:8px;border:none;border-bottom:1.5px solid var(--accent);color:var(--heading);background:transparent;padding:.5rem 0;font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .22s}
+.btn-accent-line::after{content:'→';transition:transform .22s}
+.btn-accent-line:hover{color:var(--accent)}
+.btn-accent-line:hover::after{transform:translateX(4px)}
+.cta-row{padding:3rem 5%;display:flex;align-items:center;gap:2rem;background:var(--bg)}
+.cta-row.alt{background:var(--bg-alt)}
+
+/* ── SECTION BASE ── */
+.section{padding:5rem 5%}
+.section-alt{background:var(--bg-alt)}
+.section-dark{background:var(--dark)}
+.eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:.7rem}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--accent);flex-shrink:0}
+.display{font-family:var(--serif);font-size:clamp(1.6rem,4.5vw,2.8rem);font-weight:500;color:var(--heading);line-height:1.15;margin-bottom:.8rem}
+.display em{font-style:italic;color:var(--accent)}
+.lead{font-size:.95rem;color:var(--body);line-height:1.85;max-width:620px;font-weight:300}
+
+/* ── VALUE PILLARS ── */
+.pillars{background:var(--dark);padding:4rem 5%;display:grid;grid-template-columns:1fr;gap:2px}
+.pillar{background:var(--dark-mid);padding:2.2rem 2rem;border-left:2px solid transparent;transition:border-color .3s,background .3s}
+.pillar:hover{border-left-color:var(--accent);background:rgba(255,255,255,.02)}
+.pillar-num{font-family:var(--serif);font-size:.85rem;font-weight:400;color:var(--accent);opacity:.5;display:block;margin-bottom:.7rem;letter-spacing:.1em}
+.pillar h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:#fff;margin-bottom:.5rem}
+.pillar p{font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.8;font-weight:300}
+
+/* ── ALTERNATING EDITORIAL ── */
+.feature{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+.feature-img{order:-1;width:100%;height:52vw;min-height:220px;max-height:360px;overflow:hidden;background:var(--img-fall);position:relative}
+.feature-img img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:brightness(.93) saturate(.85);transition:filter .5s,transform .6s}
+.feature:hover .feature-img img{filter:brightness(.97) saturate(.9);transform:scale(1.02)}
+.feature-body{padding:3rem 5%;background:var(--bg);display:flex;flex-direction:column;justify-content:center}
+.feature-body.alt-bg{background:var(--bg-alt)}
+.feature-num{font-family:var(--serif);font-size:3.5rem;font-weight:700;color:var(--accent);opacity:.12;line-height:1;display:block;margin-bottom:.5rem}
+.feature-body h3{font-family:var(--serif);font-size:clamp(1.3rem,3.5vw,1.9rem);font-weight:500;color:var(--heading);margin-bottom:.8rem;line-height:1.2}
+.feature-body p{font-size:.9rem;color:var(--body);line-height:1.85;font-weight:300}
+
+/* ── SERVICES ── */
+.services-section{padding:5rem 5%;background:var(--bg)}
+.services-table{margin-top:3rem;border-top:1px solid var(--border)}
+.svc-row{display:grid;grid-template-columns:3rem 1fr;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--border);align-items:start;cursor:default;transition:background .2s;padding-left:.5rem;padding-right:.5rem}
+.svc-row:hover{background:var(--bg-alt);margin:0 -5%;padding-left:5%;padding-right:5%}
+.svc-idx{font-family:var(--serif);font-size:.82rem;font-weight:400;color:var(--accent);opacity:.6;letter-spacing:.08em;padding-top:.2rem}
+.svc-content h4{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--heading);margin-bottom:.35rem;display:flex;align-items:center;justify-content:space-between}
+.svc-content h4::after{content:'↗';font-size:.85rem;color:var(--accent);opacity:0;transform:translateX(-6px);transition:all .25s}
+.svc-row:hover .svc-content h4::after{opacity:1;transform:none}
+.svc-content p{font-size:.84rem;color:var(--body);line-height:1.78;font-weight:300}
+
+/* ── IMPACT STATEMENT ── */
+.impact-section{background:var(--dark);padding:5rem 5%;overflow:hidden;position:relative}
+.impact-section::before{content:'"';position:absolute;left:-2%;top:-10%;font-family:var(--serif);font-size:22rem;color:rgba(255,255,255,.025);line-height:1;pointer-events:none}
+.impact-quote{font-family:var(--serif);font-size:clamp(1.4rem,3.5vw,2.4rem);font-weight:400;font-style:italic;color:rgba(255,255,255,.85);line-height:1.4;max-width:760px;position:relative}
+.impact-quote em{color:var(--accent);font-style:normal}
+.impact-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:3.5rem}
+.istat{background:var(--dark-mid);padding:2rem;text-align:center}
+.istat-n{font-family:var(--serif);font-size:2.2rem;font-weight:500;color:var(--accent);display:block;line-height:1}
+.istat-l{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-top:.4rem}
+
+/* ── BENEFITS ── */
+.benefits-section{padding:5rem 5%;background:var(--bg-alt)}
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:3rem}
+.bcard{background:var(--bg);padding:2rem;transition:background .25s}
+.bcard:hover{background:var(--surface)}
+.bcard-img{width:100%;height:160px;overflow:hidden;background:var(--img-fall);margin-bottom:1.2rem}
+.bcard-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.9) saturate(.82);transition:filter .4s,transform .5s}
+.bcard:hover .bcard-img img{filter:brightness(.96) saturate(.88);transform:scale(1.04)}
+.bcard-img{overflow:hidden}
+.bcard h4{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--heading);margin-bottom:.35rem}
+.bcard p{font-size:.82rem;color:var(--body);line-height:1.78;font-weight:300}
+
+/* ── CONTACT ── */
+.contact-section{background:var(--accent);padding:4.5rem 5%}
+.contact-inner{display:flex;flex-direction:column;gap:2.5rem}
+.contact-heading{font-family:var(--serif);font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:500;color:#fff;line-height:1.15;margin-bottom:.8rem}
+.contact-heading em{font-style:italic}
+.contact-sub{font-size:.92rem;color:rgba(255,255,255,.82);line-height:1.82;font-weight:300}
+.sub-form{display:flex;flex-direction:column;gap:.6rem;margin-top:1.8rem}
+.sub-form input{padding:.8rem 1rem;border:none;background:rgba(255,255,255,.15);color:#fff;font-family:var(--sans);font-size:.88rem;outline:none;backdrop-filter:blur(4px)}
+.sub-form input::placeholder{color:rgba(255,255,255,.5)}
+.sub-form input:focus{background:rgba(255,255,255,.22)}
+.sub-form button{padding:.8rem 1.5rem;background:#fff;color:var(--accent);font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;transition:all .22s;align-self:flex-start}
+.sub-form button:hover{background:var(--dark);color:#fff}
+.contact-cards{display:flex;flex-direction:column;gap:.6rem}
+.ccard{padding:1rem 1.2rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);transition:background .2s}
+.ccard:hover{background:rgba(255,255,255,.2)}
+.ccard-lbl{font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-bottom:.2rem}
+.ccard a{font-size:.94rem;font-weight:500;color:#fff;display:block;transition:opacity .2s}
+.ccard a:hover{opacity:.8}
+.ccard-sub{font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);padding:3rem 5% 1.8rem;text-align:center}
+.footer-logo{height:48px;width:auto;display:block;margin:0 auto 1.4rem}
+.footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.2rem 1.2rem;margin-bottom:1.2rem}
+.footer-nav a{font-size:.8rem;font-weight:500;color:var(--accent);letter-spacing:.04em;transition:opacity .2s}
+.footer-nav a:hover{opacity:.7}
+.footer-social{display:flex;justify-content:center;gap:.6rem;margin-bottom:1.2rem}
+.fsoc{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.fsoc:hover{border-color:var(--accent);background:var(--accent)}
+.fsoc svg{width:14px;height:14px;fill:rgba(255,255,255,.5)}
+.fsoc:hover svg{fill:#fff}
+.footer-adv{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.45);padding:.4rem 1.2rem;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem;transition:all .2s}
+.footer-adv:hover{border-color:var(--accent);color:var(--accent)}
+.footer-disc{font-size:.66rem;color:rgba(255,255,255,.28);max-width:680px;margin:0 auto;line-height:1.75}
+
+/* ── REVEALS ── */
+.r{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+.r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.d4{transition-delay:.4s}.d5{transition-delay:.48s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ══ TABLET 640px ══ */
+@media(min-width:640px){
+  .hero-photo{height:42vw;max-height:460px}
+  .pillars{grid-template-columns:repeat(3,1fr)}
+  .feature-img{height:42vw;max-height:420px}
+  .impact-stats{grid-template-columns:repeat(4,1fr)}
+  .benefits-grid{grid-template-columns:repeat(4,1fr)}
+  .bcard-img{height:140px}
+  .sub-form{flex-direction:row;flex-wrap:wrap}
+  .sub-form input{flex:1;min-width:140px}
+  .sub-form button{align-self:stretch}
+  .contact-cards{flex-direction:row;flex-wrap:wrap}
+  .ccard{flex:1;min-width:160px}
 }
 
-/* ═══════════════════════════════════════════
-   LARGE  ≥ 1200px
-═══════════════════════════════════════════ */
+/* ══ DESKTOP 920px ══ */
+@media(min-width:920px){
+  .hamburger{display:none}
+  .nav-links{display:flex;align-items:center;gap:.1rem}
+  .nav-links li a{font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--nav-text);padding:.5rem .7rem;position:relative;transition:color .2s}
+  .nav-links li a::after{content:'';position:absolute;bottom:0;left:.7rem;right:.7rem;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+  .nav-links li a:hover{color:var(--accent)}
+  .nav-links li a:hover::after{transform:scaleX(1)}
+  .nav-pill{display:inline-block;border:1px solid var(--border);color:var(--nav-text);padding:.4rem 1.1rem;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-left:.6rem;transition:all .2s}
+  .nav-pill:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  #hero{flex-direction:row;min-height:calc(100svh - 74px);max-height:900px}
+  .hero-dark{flex:0 0 52%;padding:0 5% 0 6%;min-height:unset;justify-content:center}
+  .hero-dark::before{font-size:28rem}
+  .hero-photo{flex:1;height:100%;min-height:unset;max-height:unset}
+  .hero-photo::after{background:linear-gradient(to right,var(--dark) 0%,transparent 20%)}
+  
+
+  .pillars{grid-template-columns:repeat(3,1fr)}
+  .feature{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+  .feature-img{order:0;height:100%;min-height:380px;max-height:560px}
+  .feature.flip .feature-img{order:-1}
+  .feature-body{padding:5rem 6%}
+  .feature-num{font-size:5rem}
+
+  .services-section{padding:6.5rem 5%}
+  .impact-section{padding:6.5rem 5%}
+  .benefits-section{padding:6.5rem 5%}
+  .benefits-grid{grid-template-columns:repeat(5,1fr)}
+  .bcard-img{height:180px}
+  .bcard:nth-child(even){margin-top:-2.5rem}
+  .benefits-grid{align-items:start}
+  .contact-section{padding:5.5rem 5%}
+  .contact-inner{flex-direction:row;align-items:flex-start;gap:5rem}
+  .contact-right{flex:0 0 380px}
+  .sub-form{flex-direction:column}
+  .sub-form input{width:100%}
+  .sub-form button{align-self:flex-start}
+  .contact-cards{flex-direction:column}
+  footer{padding:3.5rem 5% 2rem}
+}
+
+/* ══ LARGE 1200px ══ */
+@media(min-width:1200px){
+  #nav{padding:0 7%}
+  #hero{max-height:920px}
+  .hero-dark{padding:0 5% 0 7%}
+  .section,.services-section,.impact-section,.benefits-section,.contact-section{padding:7.5rem 7%}
+  .pillars{padding:5rem 7%}
+  .cta-row{padding:3.5rem 7%}
+  footer{padding:4rem 7% 2.5rem}
+}
+
+
+/* ── DEPTH & TEXTURE ─────────────────────────────────────── */
+/* Grain overlay on dark sections */
+.hero-dark,
+.pillars,
+.impact-section,
+.section-dark {
+  position: relative;
+}
+.hero-dark::after,
+.pillars::after,
+.impact-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-dark > * { position: relative; z-index: 1; }
+.pillars > * { position: relative; z-index: 1; }
+.impact-section > * { position: relative; z-index: 1; }
+
+/* Richer hero dark gradient */
+.hero-dark {
+  background: radial-gradient(ellipse 80% 100% at 20% 50%, #253145 0%, #1c2432 60%);
+}
+
+/* Pillar richer gradient */
+.pillars {
+  background: linear-gradient(135deg, #1a2130 0%, #1c2432 50%, #1e2840 100%);
+}
+
+/* ── SERVICES — BENTO CARD GRID ──────────────────────────── */
+.services-table { display: none; } /* hide old list */
+.svc-bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  background: var(--border);
+  margin-top: 2.5rem;
+}
+.svc-card {
+  background: var(--surface);
+  padding: 2rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: background .28s, transform .28s, box-shadow .28s;
+}
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+}
+.svc-card:hover {
+  background: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.1);
+  z-index: 1;
+}
+.svc-card:hover::before { transform: scaleX(1); }
+.svc-card-num {
+  position: absolute;
+  top: .8rem; right: 1.2rem;
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: .08;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity .28s;
+}
+.svc-card:hover .svc-card-num { opacity: .14; }
+.svc-card-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: var(--accent-lt);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.1rem;
+  transition: background .28s;
+}
+.svc-card:hover .svc-card-icon { background: var(--accent); }
+.svc-card-icon svg {
+  width: 22px; height: 22px;
+  stroke: var(--accent); fill: none;
+  stroke-width: 1.8; stroke-linecap: round;
+  transition: stroke .28s;
+}
+.svc-card:hover .svc-card-icon svg { stroke: #fff; }
+.svc-card h4 {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--heading);
+  margin-bottom: .4rem;
+}
+.svc-card p {
+  font-size: .83rem;
+  color: var(--body);
+  line-height: 1.78;
+  font-weight: 300;
+}
+
+/* ── BENEFITS — EDITORIAL NUMBERED ──────────────────────────── */
+.benefits-grid { display: none; } /* hide old grid */
+.benefit-editorial {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+.ben-row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: background .22s;
+  padding-left: .5rem; padding-right: .5rem;
+}
+.ben-row:hover {
+  background: var(--bg);
+  margin: 0 -5%;
+  padding-left: 5%; padding-right: 5%;
+}
+.ben-num {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1.3;
+  opacity: .5;
+}
+.ben-content h4 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--heading);
+  margin-bottom: .35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ben-content h4::after {
+  content: '→';
+  font-size: .9rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .22s, transform .22s;
+  flex-shrink: 0;
+}
+.ben-row:hover .ben-content h4::after {
+  opacity: 1;
+  transform: none;
+}
+.ben-content p {
+  font-size: .85rem;
+  color: var(--body);
+  line-height: 1.78;
+  font-weight: 300;
+}
+
+/* ── TABLET / DESKTOP OVERRIDES ──────────────────────────── */
+@media (min-width: 640px) {
+  .svc-bento { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 920px) {
+  .svc-bento { grid-template-columns: repeat(3, 1fr); margin-top: 3rem; }
+  .svc-card { padding: 2.4rem 2.2rem; }
+  .benefit-editorial { margin-top: 3.5rem; }
+  .ben-row {
+    grid-template-columns: 4rem 1fr auto;
+    gap: 2rem;
+    padding: 2.2rem 0;
+  }
+  .ben-tag {
+    display: inline-block;
+    font-size: .6rem; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: .25rem .6rem;
+    opacity: .6;
+    align-self: flex-start;
+    margin-top: .25rem;
+    white-space: nowrap;
+  }
+}
 @media (min-width: 1200px) {
-  #hero { max-height: 520px; }
-  .hero-text h1 { font-size: 3.1rem; }
-  .hero-text { padding-left: 7%; }
-  .services-section::before { font-size: 16rem; }
+  .svc-bento { margin-top: 3.5rem; }
 }
+
+/* ── FEATURE SECTION FIX ─────────────────────────────────── */
+/* On mobile: photo always on top */
+.feature { display: flex; flex-direction: column; }
+.feature-img { order: -1; }
+/* On desktop: true alternating via grid */
+@media (min-width: 920px) {
+  .feature { display: grid; grid-template-columns: 1fr 1fr; }
+  .feature-img { order: 0; } /* resets mobile -1 */
+  /* .flip puts image on RIGHT: text (order 0 default) goes left, img (order 1) goes right */
+  .feature.flip .feature-img { order: -1; }
+  .feature.flip .feature-body { order: 0; }
+}
+
+/* ── HERO GAP FIX ─────────────────────────────────────────── */
+/* Wrap hero+stats in dark container so no white shows */
+.hero-wrap { background: var(--dark); }
+
+/* ── PILLAR HOVER ─────────────────────────────────────────── */
+.pillar {
+  background: rgba(255,255,255,.02);
+  border-left: 2px solid rgba(255,255,255,.05);
+}
+.pillar:hover { border-left-color: var(--accent); }
+
+
+/* ── BENEFITS MOSAIC ── */
+.benefit-editorial { display: none; }
+.benefits-grid { display: none; }
+.ben-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border);
+  margin-top: 2.5rem;
+}
+.ben-card {
+  background: var(--surface);
+  padding: 2.2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  transition: background .28s, transform .28s;
+  cursor: default;
+}
+.ben-card:hover { background: var(--bg); transform: translateY(-2px); z-index: 1; }
+.ben-card.featured {
+  grid-column: 1 / -1;
+  background: var(--dark);
+  padding: 3rem 2.5rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.ben-card.featured:hover { background: var(--dark-mid); }
+.ben-card-ghost {
+  position: absolute;
+  bottom: -1.5rem; right: -.5rem;
+  font-family: var(--serif);
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: .07;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity .28s;
+}
+.ben-card:hover .ben-card-ghost { opacity: .12; }
+.ben-card.featured .ben-card-ghost { font-size: 10rem; opacity: .06; }
+.ben-card-accent {
+  width: 28px; height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: .3rem;
+}
+.ben-card-body { flex: 1; }
+.ben-card-body h4 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--heading);
+  margin-bottom: .4rem;
+}
+.ben-card.featured .ben-card-body h4 { color: #fff; font-size: 1.3rem; }
+.ben-card-body p {
+  font-size: .84rem;
+  color: var(--body);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.ben-card.featured .ben-card-body p { color: rgba(255,255,255,.6); }
+.ben-card-tag {
+  display: inline-block;
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: .2rem .55rem;
+  opacity: .7;
+  margin-top: .3rem;
+  align-self: flex-start;
+}
+.ben-card.featured .ben-card-tag { border-color: rgba(255,255,255,.3); color: rgba(255,255,255,.5); }
+@media (min-width: 640px) {
+  .ben-mosaic { grid-template-columns: repeat(3, 1fr); }
+  .ben-card.featured { grid-column: span 3; flex-direction: row; }
+}
+@media (min-width: 920px) {
+  .ben-mosaic { margin-top: 3rem; }
+  .ben-card { padding: 2.5rem 2.2rem; }
+  .ben-card.featured { padding: 3.5rem 3rem; }
+  .ben-card-ghost { font-size: 8rem; }
+  .ben-card.featured .ben-card-ghost { font-size: 12rem; }
+}
+
+
+/* ══ COMPACT ALTERNATING SECTIONS (letsimpactwealth.com style) ══ */
+
+/* Feature body: tighter padding, like letsimpactwealth.com */
+.feature-body {
+  padding: 2.4rem 5% 2.4rem 5%;
+}
+.feature-body.alt-bg { background: var(--bg-alt); }
+
+/* Feature num: remove oversized ghost numbers */
+.feature-num { display: none; }
+
+/* Feature image: shorter, proportional */
+.feature-img {
+  min-height: 260px !important;
+  max-height: 340px !important;
+}
+
+/* Desktop feature overrides */
+@media(min-width:920px){
+  .feature-body { padding: 3rem 6%; }
+  .feature-img {
+    min-height: 280px !important;
+    max-height: 460px !important;
+    height: 100% !important;
+  }
+  /* Tighter section padding across the board */
+  .section,
+  .services-section,
+  .impact-section,
+  .benefits-section { padding: 4.5rem 5%; }
+  .pillars { padding: 0; }
+  .pillar { padding: 2.4rem 2.2rem; }
+}
+
+@media(min-width:1200px){
+  .section,
+  .services-section,
+  .impact-section,
+  .benefits-section { padding: 5.5rem 7%; }
+  .feature-body { padding: 3.5rem 7%; }
+}
+
+/* Remove unused section intro margins */
+.section-intro-wrap { margin-bottom: 0; }
+
+/* Tighten pillar at mobile */
+.pillars { padding: 0; gap: 0; }
+.pillar { padding: 2rem 1.8rem; }
+
+/* Compact hero-dark padding */
+.hero-dark { padding: 3rem 5% 3rem; }
+@media(min-width:920px){
+  .hero-dark { padding: 0 5% 0 6%; }
+}
+@media(min-width:1200px){
+  .hero-dark { padding: 0 5% 0 7%; }
+}
+
+/* Clean up empty gap between hero-wrap and first section */
+.hero-wrap { margin-bottom: 0; }
+
+/* Tighten cta-row strips */
+.cta-row { padding: 2rem 5%; }
+.cta-row.alt { padding: 2rem 5%; }
+
+/* Tighten contact section */
+.contact-section { padding: 3.5rem 5%; }
+@media(min-width:920px){
+  .contact-section { padding: 4.5rem 5%; }
+}
+@media(min-width:1200px){
+  .contact-section { padding: 5rem 7%; }
+}
+
+/* Tighten footer */
+footer { padding: 2.5rem 5% 1.5rem; }
+@media(min-width:920px){
+  footer { padding: 3rem 5% 1.8rem; }
+}
+
+/* Feature eyebrow: keep but compact it */
+.eyebrow { margin-bottom: 0.5rem; }
+.sec-bar { margin-bottom: 0.8rem; }
+.feature-body h3 { margin-bottom: 0.7rem; }
+.feature-body p { font-size: 0.88rem; line-height: 1.8; }
+
+/* Benefit mosaic cards: slightly more compact */
+.ben-card { padding: 1.8rem 1.6rem; }
+.ben-card.featured { padding: 2.5rem 2rem; }
+
+/* Services table rows: tighter */
+.svc-row { padding: 1.4rem 0; }
+
+/* Impact quote section: compact */
+.impact-section { padding: 3.5rem 5% !important; }
+@media(min-width:920px){
+  .impact-section { padding: 4.5rem 5% !important; }
+}
+@media(min-width:1200px){
+  .impact-section { padding: 5rem 7% !important; }
+}
+
+/* Impact stats: compact */
+.impact-stats { margin-top: 2rem; }
+.istat { padding: 1.4rem 1.2rem; }
+
+/* Value pillars gap */
+.pillar-num { margin-bottom: 0.5rem; }
+.pillar h3 { margin-bottom: 0.3rem; }
+.pillar p { font-size: 0.84rem; }
 
 </style>
 </head>
 <body>
-
 <!-- ── ALT DESIGN SWITCHER ── -->
 <div class="version-switcher">
   <span class="version-label">Design 1 of 2</span>
@@ -528,287 +921,305 @@ footer { background: var(--footer-bg); padding: 2.5rem 4% 1.5rem; }
 </div>
 
 
-<!-- ── NAV ── -->
+
+
+
+
+
+
 <nav id="nav" role="navigation" aria-label="Main navigation">
-  <a href="#" class="nav-brand"><img src="logo.png" alt="Impact Wealth Partners" width="220" height="50" loading="eager"/></a>
-  <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
+  <a href="#" class="nav-logo"><img src="logo.png" alt="Impact Wealth Partners" width="200" height="46" loading="eager"/></a>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#process">How It Works</a></li>
-    <li><a href="#why">Why Flat Fee</a></li>
-    <li><a href="#contact" class="nav-contact-btn">Get Started</a></li>
+    <li><a href="#benefits">Benefits</a></li>
+    <li><a href="https://www.letsimpactwealth.com" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+    <li><a href="#contact" class="nav-pill">Contact</a></li>
   </ul>
+  <button class="hamburger" id="hbg" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-
-<!-- ── HERO ── -->
-<section id="hero" aria-label="Hero">
-  <div class="hero-text">
-    <div class="hero-eyebrow">Flat Fee &middot; Fee-Only &middot; Fiduciary</div>
-    <h1>Your Financial Plan,<br>Built Around You</h1>
-    <p>Impact Wealth Partners delivers flat fee, fee-only financial planning in Sioux Falls and Phoenix. No commissions. No agendas. Just a fiduciary advisor fully aligned with your goals.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary-accent">Get Started</a>
-      <a href="#services" class="btn-outline-dark">Our Services</a>
-    </div>
-  </div>
-  <div class="hero-photo" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=75&fit=crop&crop=faces,center&auto=format"
-         alt="Impact Wealth Partners team — flat fee financial planners in Sioux Falls and Phoenix"
-         width="900" height="860" loading="eager" fetchpriority="high"/>
-    <div class="hero-stats" aria-label="Key facts">
-      <div class="stat-card">
-        <div class="stat-num">20+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">SD &amp; AZ</div>
-        <div class="stat-label">Two States Served</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Fee-Only Always</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="alt-section alt-reverse">
-    <div class="alt-text">
-      <span class="bg-num">01</span>
-      <p class="section-label">Client Focused</p>
-      <div class="section-underline"></div>
-      <h3>A relationship built on understanding, not transactions.</h3>
-      <p style="margin-top:1rem;">Our dedicated team, led by Wealth Advisor Michael J. Peterson, prioritizes a relationship-driven approach. We sit with you, understand your financial story, and accompany you on the path to your goals — not just once, but throughout your financial life.</p>
-    </div>
-    <div class="alt-photo">
-      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=75&fit=crop&crop=faces,center&auto=format"
-           alt="Client focused fee-only financial planning consultation — Impact Wealth Partners"
-           width="700" height="500" loading="lazy" decoding="async"/>
-    </div>
-  </div>
-
-  <div class="alt-section">
-    <div class="alt-photo">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=75&fit=crop&crop=center&auto=format"
-           alt="Transparent flat fee financial planning — Impact Wealth Partners Sioux Falls SD"
-           width="700" height="500" loading="lazy" decoding="async"/>
-    </div>
-    <div class="alt-text">
-      <span class="bg-num">02</span>
-      <p class="section-label">Transparent</p>
-      <div class="section-underline"></div>
-      <h3>You always know exactly what you pay and why.</h3>
-      <p style="margin-top:1rem;">From initial conversations to retirement planning, every fee is straightforward and explained upfront. We use the IMPACT Framework to clearly outline how your assets are being managed — no surprises, no hidden costs, ever.</p>
-    </div>
-  </div>
-
-  <div class="alt-section alt-reverse">
-    <div class="alt-text">
-      <span class="bg-num">03</span>
-      <p class="section-label">Fair</p>
-      <div class="section-underline"></div>
-      <h3>A fiduciary standard. Your interests, always first.</h3>
-      <p style="margin-top:1rem;">As fee-only fiduciaries, we are legally obligated to put your interests above ours. With a flat fee model, we have no incentive to recommend one product over another — only to give you the best possible advice for your specific situation.</p>
-    </div>
-    <div class="alt-photo">
-      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=75&fit=crop&crop=faces,top&auto=format"
-           alt="Fair fiduciary financial advisor meeting — Impact Wealth Partners Phoenix AZ"
-           width="700" height="500" loading="lazy" decoding="async"/>
-    </div>
-  </div>
-</section>
-
-<!-- ── SERVICES ── -->
-<section id="services" class="services-section" aria-labelledby="services-heading">
-  <p class="section-label" style="justify-content:center;">What We Do</p>
-  <h2 class="section-heading" id="services-heading">Fee-Only Financial Planning Services</h2>
-  <p class="section-sub">Every service we offer is delivered on a flat fee basis with no commissions, no hidden incentives, and a fiduciary commitment to your best interests.</p>
-  <div class="services-grid">
-    <div class="service-item">
-      <div class="service-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="7" width="20" height="14" rx="1"/><path d="M3 11h20M8 17h2M15 17h4"/></svg></div>
-      <h4>Investment Planning</h4>
-      <p>Personalized portfolio construction using our IMPACT Framework — built around your risk tolerance, timeline, and goals. Never around what earns us a commission.</p>
-    </div>
-    <div class="service-item">
-      <div class="service-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="4" y="4" width="18" height="18" rx="1"/><path d="M4 10h18M9 4v6M17 4v6"/></svg></div>
-      <h4>Tax Planning</h4>
-      <p>Proactive tax strategy in close collaboration with your CPA — Roth conversions, tax-loss harvesting, and charitable giving that keeps more of your wealth working for you.</p>
-    </div>
-    <div class="service-item">
-      <div class="service-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 22V13l9-7 9 7v9"/><rect x="10" y="16" width="6" height="6"/></svg></div>
-      <h4>Estate Planning</h4>
-      <p>Coordinating with your legal advisors to align your financial plan with your estate documents, trust structures, and legacy goals across generations.</p>
-    </div>
-    <div class="service-item">
-      <div class="service-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="13" cy="13" r="9"/><path d="M13 7v6l4 2.5"/></svg></div>
-      <h4>Retirement Planning</h4>
-      <p>A clear roadmap to retirement — Social Security optimization, income planning, withdrawal strategies, and sustainable cash flow through every stage of life.</p>
-    </div>
-    <div class="service-item">
-      <div class="service-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 3c0 0-9 4-9 11a9 9 0 0018 0C22 7 13 3 13 3z"/><path d="M10 13l2 2 4-4"/></svg></div>
-      <h4>Protection Planning</h4>
-      <p>Objective, commission-free insurance analysis to close gaps in your coverage — life, disability, long-term care, and liability assessed purely in your interest.</p>
-    </div>
-    <div class="service-item">
-      <div class="service-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 22V13M11 22V9M15 22V14M19 22V6M4 22h18"/></svg></div>
-      <h4>Wealth Accumulation</h4>
-      <p>Disciplined, goal-driven strategies to systematically grow and protect your wealth throughout your working years and into the future you're building toward.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── HOW IT WORKS ── -->
-<section id="process" class="process-section" aria-labelledby="process-heading">
-  <p class="section-label">How It Works</p>
-  <h2 class="section-heading" id="process-heading">Simple. Transparent. Yours.</h2>
-  <p class="section-sub" style="margin-left:0;">From first call to ongoing partnership, here&rsquo;s what working with Impact Wealth Partners looks like.</p>
-  <div class="process-grid">
-    <div class="process-step">
-      <div class="process-num">01</div>
-      <div class="process-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      </div>
-      <h4>Complimentary Call</h4>
-      <p>We start with a no-obligation conversation to understand your goals, answer your questions, and confirm we&rsquo;re the right fit for each other.</p>
-      <div class="process-connector"></div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">02</div>
-      <div class="process-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-      </div>
-      <h4>Your Custom Plan</h4>
-      <p>We build a comprehensive financial plan tailored to your life — investment strategy, tax planning, retirement, estate, and protection all in one place.</p>
-      <div class="process-connector"></div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">03</div>
-      <div class="process-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h4>Ongoing Partnership</h4>
-      <p>Life changes. Your plan adapts. We meet regularly to review progress, adjust strategy, and keep your financial plan aligned with where you&rsquo;re headed.</p>
-    </div>
-  </div>
-</section>
-
+<div class="nav-panel" id="npanel" aria-hidden="true">
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#benefits">Benefits</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<!-- ── WHY FLAT FEE ── -->
-<section id="why" class="comparison-section" aria-labelledby="why-heading">
-  <p class="section-label" style="justify-content:center;">Why Flat Fee</p>
-  <h2 class="section-heading" id="why-heading">The difference is more than the price.</h2>
-  <p class="section-sub">The way your advisor gets paid shapes the advice they give. Here&rsquo;s why flat fee, fee-only planning produces better outcomes.</p>
-  <div class="comparison-grid">
-    <div class="comparison-col good">
-      <div class="comparison-col-header">Flat Fee &amp; Fee-Only ✓</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="check"><polyline points="2 8 6 12 14 4"/></svg>You always know exactly what you pay</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="check"><polyline points="2 8 6 12 14 4"/></svg>No commissions, ever</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="check"><polyline points="2 8 6 12 14 4"/></svg>Advice is driven by your goals</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="check"><polyline points="2 8 6 12 14 4"/></svg>Same fee regardless of portfolio size</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="check"><polyline points="2 8 6 12 14 4"/></svg>Full fiduciary duty at all times</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="check"><polyline points="2 8 6 12 14 4"/></svg>No incentive to recommend products</div>
+<!-- HERO -->
+<div class="hero-wrap">
+<section id="hero">
+  <div class="hero-dark">
+    <span class="hero-eyebrow">Flat Fee &middot; Fee-Only &middot; Fiduciary</span>
+    <h1>Your financial plan,<br><em>built around you.</em></h1>
+    <p>Impact Wealth Partners delivers transparent, flat-fee financial planning in Sioux Falls and Phoenix &mdash; with a fiduciary commitment to your best interests, always.</p>
+    <a href="#contact" class="btn-line">Let&rsquo;s Talk More</a>
+  </div>
+  <div class="hero-photo" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&q=80&fit=crop&crop=faces,center&auto=format"
+         alt="Impact Wealth Partners team" width="1000" height="700" loading="eager" fetchpriority="high"/>
+  </div>
+</section>
+</div>
+
+<!-- VALUE PILLARS -->
+<div class="pillars" aria-label="Our values" id="about">
+  <div class="pillar r">
+    <span class="pillar-num">01</span>
+    <h3>Client Focused</h3>
+    <p>We sit with you, learn your story, and build every recommendation around your values and goals &mdash; not a template or a commission structure.</p>
+  </div>
+  <div class="pillar r d2">
+    <span class="pillar-num">02</span>
+    <h3>Transparent</h3>
+    <p>Every fee is stated upfront. No commissions, no hidden charges, no incentives to steer you toward any product. You always know exactly what you pay.</p>
+  </div>
+  <div class="pillar r d4">
+    <span class="pillar-num">03</span>
+    <h3>Fiduciary</h3>
+    <p>As a registered fiduciary, Michael J. Peterson is legally bound to act in your best interest at every step &mdash; not the firm&rsquo;s, not a broker&rsquo;s. Yours.</p>
+  </div>
+</div>
+
+<!-- ALTERNATING FEATURES -->
+<section>
+  <div class="feature flip r">
+    <div class="feature-img">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=700&q=80&fit=crop&crop=faces,center&auto=format"
+           alt="Client focused financial planning consultation" width="700" height="500" loading="lazy" decoding="async"/>
     </div>
-    <div class="comparison-vs"><span>VS</span></div>
-    <div class="comparison-col bad">
-      <div class="comparison-col-header">Commission-Based / AUM</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="cross"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>Fees grow as your portfolio grows</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="cross"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>Hidden commissions on products sold</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="cross"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>Advice can be influenced by incentives</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="cross"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>Pay more as wealth increases</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="cross"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>May not always be a fiduciary</div>
-      <div class="comparison-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="cross"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>Product recommendations may be biased</div>
+    <div class="feature-body">
+      <span class="eyebrow">Client Focused</span>
+      <h3>A relationship built on understanding, not transactions.</h3>
+      <p>Our dedicated team prioritizes a relationship-driven approach. We understand that you&rsquo;ve worked diligently and value not just astute financial advice, but also a genuine connection and exceptional service. By aligning with a flat fee financial planner, we establish a foundation built on trust, with advisors who sit with you, understand your financial story, and accompany you on the path to your goals.</p>
+    </div>
+  </div>
+
+  <div class="feature r">
+    <div class="feature-body alt-bg">
+      <span class="eyebrow">Transparent</span>
+      <h3>You always know exactly what you pay and why.</h3>
+      <p>From our initial conversations to planning your retirement, every fee is straightforward and explained in full detail. This transparency extends to our investment planning process &mdash; we clearly outline how your assets are being managed, minimizing surprises and fostering a relationship based on clarity and trust.</p>
+    </div>
+    <div class="feature-img">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80&fit=crop&crop=center,top&auto=format"
+           alt="Transparent fee-only financial planning — clear desk and planning documents" width="700" height="500" loading="lazy" decoding="async"/>
+    </div>
+  </div>
+  </div>
+
+  <div class="feature flip r">
+    <div class="feature-img">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80&fit=crop&crop=faces,center&auto=format"
+           alt="Trusted fee-only financial advisor — fiduciary standard" width="700" height="500" loading="lazy" decoding="async"/>
+    </div>
+    <div class="feature-body">
+      <span class="eyebrow">Fair</span>
+      <h3>A fiduciary standard. Your interests, always first.</h3>
+      <p>Fee-only financial advisors at our Sioux Falls or Phoenix office embrace fairness as a guiding principle. We follow a fiduciary standard, meaning we place your interests above ours. With a flat fee model, the potential for conflict of interest is significantly reduced as we don&rsquo;t earn commissions from selling financial products.</p>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
-<section id="contact" aria-labelledby="contact-heading">
+<div class="cta-row"><a href="#contact" class="btn-accent-line">Let&rsquo;s Connect</a></div>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="r">
+    <span class="eyebrow">What We Do</span>
+    <h2 class="display">Fee-Only Financial<br>Planning Services</h2>
+    <p class="lead">When engaging with us, you&rsquo;re choosing a team fully invested in aligning your financial resources with your lifetime ambitions &mdash; every plan meticulously crafted to support your personal vision.</p>
+  </div>
+    <div class="svc-bento">
+    <div class="svc-card r">
+      <span class="svc-card-num">01</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h4>Investment Planning</h4>
+      <p>Personalized portfolio construction using our IMPACT Framework — built around your risk tolerance, timeline, and goals. Never around commissions.</p>
+    </div>
+    <div class="svc-card r d1">
+      <span class="svc-card-num">02</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <h4>Tax Planning</h4>
+      <p>Proactive tax strategy in close collaboration with your CPA — Roth conversions, tax-loss harvesting, and charitable giving that works for you.</p>
+    </div>
+    <div class="svc-card r d2">
+      <span class="svc-card-num">03</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <h4>Estate Planning</h4>
+      <p>Coordinating with your legal advisors to align your financial plan with estate documents, trusts, and legacy goals across generations.</p>
+    </div>
+    <div class="svc-card r d3">
+      <span class="svc-card-num">04</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h4>Retirement Planning</h4>
+      <p>A clear roadmap to retirement: Social Security optimization, income planning, and sustainable withdrawal strategies for every stage of life.</p>
+    </div>
+    <div class="svc-card r d4">
+      <span class="svc-card-num">05</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+      <h4>Protection Planning</h4>
+      <p>Commission-free insurance analysis to close gaps in life, disability, long-term care, and liability coverage — assessed purely in your interest.</p>
+    </div>
+    <div class="svc-card r d5">
+      <span class="svc-card-num">06</span>
+      <div class="svc-card-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <h4>Wealth Accumulation</h4>
+      <p>Disciplined, goal-driven strategies to systematically grow and protect your wealth throughout your working years and into the future ahead.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-row alt"><a href="#contact" class="btn-dark">Let&rsquo;s Start a Conversation</a></div>
+
+<!-- IMPACT STATEMENT -->
+<section class="impact-section">
+  <p class="impact-quote r">&ldquo;We believe your financial strategy should be as <em>unique</em> as you are &mdash; no cookie-cutter solutions, just a genuine partnership built on understanding.&rdquo;</p>
+    <div class="impact-stats">
+    <div class="istat r"><span class="istat-n">20+</span><span class="istat-l">Years Experience</span></div>
+    <div class="istat r d1"><span class="istat-n">SD &amp; AZ</span><span class="istat-l">Two States Served</span></div>
+    <div class="istat r d2"><span class="istat-n">100%</span><span class="istat-l">Fee-Only Always</span></div>
+    <div class="istat r d3"><span class="istat-n">$0</span><span class="istat-l">Commissions Earned</span></div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits" class="benefits-section">
+  <div class="r">
+    <span class="eyebrow">Why Choose Us</span>
+    <h2 class="display">Benefits of Working<br>With Impact Wealth Partners</h2>
+    <p class="lead">Working closely with you, we strive to marry dreams and financial stewardship to carve out the most fulfilling path forward.</p>
+  </div>
+      <div class="ben-mosaic">
+    <div class="ben-card featured r">
+      <div class="ben-card-accent"></div>
+      <div class="ben-card-body">
+        <h4>Personalized Financial Advice</h4>
+        <p>Our mission is to provide advice tailored specifically to your life stories and financial journeys, presenting guidance that resonates with your personal values and long-term goals — not a template applied to everyone. Every plan begins with listening, not selling.</p>
+        <span class="ben-card-tag">Tailored</span>
+      </div>
+      <span class="ben-card-ghost" aria-hidden="true">01</span>
+    </div>
+    <div class="ben-card r d1">
+      <div class="ben-card-accent"></div>
+      <div class="ben-card-body">
+        <h4>Professional Asset Management</h4>
+        <p>Assessing risks and designing a portfolio that aligns with your risk appetite and long-term financial framework — with full transparency on every decision.</p>
+        <span class="ben-card-tag">Expert</span>
+      </div>
+      <span class="ben-card-ghost" aria-hidden="true">02</span>
+    </div>
+    <div class="ben-card r d2">
+      <div class="ben-card-accent"></div>
+      <div class="ben-card-body">
+        <h4>Comprehensive Legacy Planning</h4>
+        <p>From estate planning to retirement readiness, ensuring you are prepared for the future while securing prosperity for generations to come.</p>
+        <span class="ben-card-tag">Legacy</span>
+      </div>
+      <span class="ben-card-ghost" aria-hidden="true">03</span>
+    </div>
+    <div class="ben-card r d3">
+      <div class="ben-card-accent"></div>
+      <div class="ben-card-body">
+        <h4>Custom Impact Strategies</h4>
+        <p>True impact extends beyond assets. We help you integrate your values, community, and charitable goals directly into your financial strategy.</p>
+        <span class="ben-card-tag">Custom</span>
+      </div>
+      <span class="ben-card-ghost" aria-hidden="true">04</span>
+    </div>
+    <div class="ben-card r d4">
+      <div class="ben-card-accent"></div>
+      <div class="ben-card-body">
+        <h4>Confidence &amp; Clarity</h4>
+        <p>Transparent communication means you never wonder about hidden fees or obscured agendas. Our flat-fee model gives you the confidence to focus on living your best life.</p>
+        <span class="ben-card-tag">Clarity</span>
+      </div>
+      <span class="ben-card-ghost" aria-hidden="true">05</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
   <div class="contact-inner">
     <div class="contact-left">
-      <p class="section-label" style="color:rgba(255,255,255,0.7);">Get in Touch</p>
-      <h2 id="contact-heading">Let&rsquo;s talk about your financial future.</h2>
-      <p>Schedule a complimentary call with Michael J. Peterson. No obligation, no pressure — just an honest conversation about where you are and where you want to be.</p>
+      <span class="eyebrow" style="color:rgba(255,255,255,.7)">Get in Touch</span>
+      <h2 class="contact-heading">Place your legacy in hands you can <em>trust.</em></h2>
+      <p class="contact-sub">Schedule a complimentary call with Michael J. Peterson &mdash; no obligation, no pressure. Just an honest conversation about your financial future in Sioux Falls or Phoenix.</p>
+      <form class="sub-form" onsubmit="return false;" aria-label="Newsletter">
+        <input type="text" placeholder="First Name" aria-label="First Name"/>
+        <input type="text" placeholder="Last Name" aria-label="Last Name"/>
+        <input type="email" placeholder="Email Address" aria-label="Email"/>
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
     <div class="contact-right">
-      <div class="contact-card" itemscope itemtype="https://schema.org/LocalBusiness">
-        <div class="contact-card-label">South Dakota</div>
-        <a href="tel:+16053339886" itemprop="telephone">+1 (605) 333-9886</a>
-        <div class="contact-card-sub">Sioux Falls, SD &mdash; Primary Office</div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-label">Arizona</div>
-        <a href="tel:+16026910248" itemprop="telephone">+1 (602) 691-0248</a>
-        <div class="contact-card-sub">Phoenix, AZ &mdash; Arizona Office</div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-label">Email</div>
-        <a href="mailto:mike@letsimpactwealth.com" itemprop="email">mike@letsimpactwealth.com</a>
-        <div class="contact-card-sub">Michael J. Peterson, Wealth Advisor</div>
+      <div class="contact-cards" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="ccard">
+          <span class="ccard-lbl">South Dakota</span>
+          <a href="tel:+16053339886" itemprop="telephone">+1 (605) 333-9886</a>
+          <div class="ccard-sub">Sioux Falls, SD &mdash; Primary Office</div>
+        </div>
+        <div class="ccard">
+          <span class="ccard-lbl">Arizona</span>
+          <a href="tel:+16026910248" itemprop="telephone">+1 (602) 691-0248</a>
+          <div class="ccard-sub">Phoenix, AZ &mdash; Arizona Office</div>
+        </div>
+        <div class="ccard">
+          <span class="ccard-lbl">Email</span>
+          <a href="mailto:mike@letsimpactwealth.com" itemprop="email">mike@letsimpactwealth.com</a>
+          <div class="ccard-sub">Michael J. Peterson, Wealth Advisor</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="logo.png" alt="Impact Wealth Partners" width="200" height="52" loading="lazy"/>
-      <p>Flat fee, fee-only, fiduciary financial planning in Sioux Falls, South Dakota and Phoenix, Arizona. No commissions. No conflicts. Just advice built around you.</p>
-      <a href="#" class="btn-outline-footer">ADV Form</a>
-    </div>
-    <div class="footer-col">
-      <h5>Navigate</h5>
-      <a href="#about" aria-label="About Impact Wealth Partners">About</a>
-      <a href="#services" aria-label="Financial planning services">Services</a>
-      <a href="#process" aria-label="How our process works">How It Works</a>
-      <a href="#why" aria-label="Why choose flat fee">Why Flat Fee</a>
-      <a href="#contact" aria-label="Contact Impact Wealth Partners">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h5>Contact</h5>
-      <a href="tel:+16053339886" class="footer-phone">(605) 333-9886</a>
-      <span style="font-size:0.75rem;color:var(--footer-disc);margin-bottom:0.8rem;display:block;">Sioux Falls, SD</span>
-      <a href="tel:+16026910248" class="footer-phone">(602) 691-0248</a>
-      <span style="font-size:0.75rem;color:var(--footer-disc);margin-bottom:0.8rem;display:block;">Phoenix, AZ</span>
-      <a href="mailto:mike@letsimpactwealth.com">mike@letsimpactwealth.com</a>
-    </div>
+  <img src="logo.png" alt="Impact Wealth Partners" class="footer-logo" width="180" height="48" loading="lazy"/>
+  <nav class="footer-nav" aria-label="Footer navigation">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="footer-social">
+    <a href="https://facebook.com/weimpactwealth" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+    </a>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Impact Wealth Partners. Securities and investment advisory services offered through registered channels. Michael J. Peterson, Wealth Advisor. Not legal or tax advice.</p>
-    <div class="footer-socials">
-      <a href="https://facebook.com/weimpactwealth" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow Impact Wealth Partners on Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-      </a>
-    </div>
-  </div>
+  <a href="#" class="footer-adv">ADV Form</a>
+  <p class="footer-disc"><em>Securities and investment advisory services offered through registered channels. Impact Wealth Partners is a Registered Investment Advisor. All written content is for informational purposes only. All information or ideas provided should be discussed in detail with an advisor, accountant or legal counsel prior to implementation.</em></p>
 </footer>
 
+<style>.r{opacity:1;transform:none}.js .r{opacity:0;transform:translateY(18px)}.js .r.in{opacity:1;transform:none}</style>
 <script>
-  // Nav scroll effect
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
-  // Mobile nav
-  function toggleNav() {
-    const l = document.getElementById('navLinks');
-    l.classList.toggle('open');
-  }
-  // Scroll reveal
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.alt-section, .service-item').forEach(el => obs.observe(el));
-  // Close nav on link click
-  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  }));
+document.documentElement.classList.add('js');
+var nav=document.getElementById('nav'),hbg=document.getElementById('hbg'),np=document.getElementById('npanel');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+hbg.addEventListener('click',function(){
+  var o=hbg.classList.toggle('open');
+  np.classList.toggle('open',o);
+  hbg.setAttribute('aria-expanded',o);
+  np.setAttribute('aria-hidden',!o);
+  document.body.style.overflow=o?'hidden':'';
+});
+np.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    hbg.classList.remove('open');np.classList.remove('open');
+    hbg.setAttribute('aria-expanded',false);np.setAttribute('aria-hidden',true);
+    document.body.style.overflow='';
+  });
+});
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.r').forEach(function(el){obs.observe(el);});
 </script>
-
 </body>
 </html>
